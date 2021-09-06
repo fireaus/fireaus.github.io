@@ -57,9 +57,15 @@ $black			: #222;
   /*--themecolorLines: #4ceb95;*/
 
   /*Blue Theme*/
-  --themecolor: #1586b3;  
+/*  --themecolor: #1586b3;  
   --themecolorrgba: rgba(21, 134, 179, 0.2);
-  --themecolorLines: #1586b3;
+  --themecolorLines: #1586b3;*/
+
+  /*FIRE Red Theme*/
+  --themecolor: #B33D38;  
+  --themecolorrgba: rgb(179, 61, 56, 1);
+  --themecolorLines: #B33D38;
+
 
   /*Red Theme*/
   /*--themecolor: #DB4437;*/
@@ -2094,13 +2100,14 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 1.0);
 }
 
 #header.header-scrolled {
   transition: all 0.5s;
   box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
 }
+
 
 #header.header-scrolled .main-menu {
   border-color: transparent;
@@ -2315,7 +2322,7 @@ color: var(--linkhover);
   padding: 0 8px 0px 8px;
   text-decoration: none;
   display: inline-block;
-  color: #222;
+  color: #ddd;
   font-weight: 800;
   font-size: 16px;
   text-transform: uppercase;

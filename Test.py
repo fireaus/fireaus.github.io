@@ -8,8 +8,8 @@ import glob
 def main():
     BasePath = './'
     Files = glob.glob(BasePath + '*.html')
-    CopyFileName = 'CopyFromFooter.html'
-    Keyword = 'EDIT FOOT'
+    CopyFileName = 'CopyFrom.html'
+    Keyword = 'EDIT ME'
 
     for FileName in Files:
         print(FileName)

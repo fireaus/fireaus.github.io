@@ -61,11 +61,7 @@
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
 			          <li><a href="../../index.html">Home</a></li>
-                      <li><a href="../../about.html">About</a></li>
-                      <li><a href="../../research.html">Research</a></li>
-                      <li><a href="../../tutorials.html">Tutorials</a></li>
                       <li><a href="../../teaching.html">Teaching</a></li>
-                      <li><a href="../../services.html">Services</a></li>
 			        </ul>
 			      </nav><!-- #nav-menu-container -->		    		
 		    	</div>
@@ -117,109 +113,28 @@
 						<hr>
                        
 
-			<h3> What is this course about? </h3><br><br>
+			<h4>Welcome to FIRE 298 (Section 0108), Autonomous Unmanned Systems course by <a href='http://nitinjsanket.github.io/'>Dr. Nitin J. Sanket.</a><br><br></h4>
 
 
-            <a name='whatisanimu'></a>
-			
-            <h3> What is an IMU? </h3><br><br>
+			<h3> What is this course about? </h3><br>
+			The goal of this course is to pitch a research idea on which the students will work on in groups for the entire semetester with the common theme of using robots to solve a problem for societal good. The projects should have the potential of eventually becoming a conference/journal publication. In-case you haven't seen my Welcome note, <a href="https://www.youtube.com/watch?v=JEzaZbrWFwE">here</a> is the video. Assignments and upcoming deadlines are given next.<br><br>
 
-            An IMU is the abbreviation for <b>Inertial Measurement Unit</b>. It generally comes packaged in two flavors: 6-DoF and 9-DoF, i.e., six degrees of freedom or nine degrees of freedom.<br><br>
+			<h3> Upcoming Deadline(s) </h3><br>
+			<h4><a href="asn1.html">ASN1</a> on September 13, 2021.</h4><br><br>
 
-            The first component of an IMU is called the <b>Gyroscope</b> or <b>Gyro</b> and it measures the angular velocity across an axis. So, you would need 3 gyros to compute angles in 3D. The best part about a gyro is that it is not affected by external forces and acceleration. Gyros work very well under dynamic conditions when rotational velocities are high, however they drift significantly with regard to time. Hence, the simplest filtering operation perfromed on gyro data is a high pass filter to remove low frequency drift.<br><br> 
+			<h3> Piazza and ELMS </h3><br>
+			If you haven't done so already, register yourself on <a href='piazza.com/terpmail.umd/fall2021/fire298aus'>Piazza</a> with your terpmail. We'll be using Piazza for all announcements and discussions. Please use Piazza to contact me (Feel free to use private posts on Piazza to contact me). Please do <b>NOT</b> contact me via email unless it's an emergency, and do <b>NOT</b> contact me on any social media platform such as Facebook or WhatsApp (please respect my privacy) regarding course content. If you want to have a chat about my research, chat with me after class. <br><br>
 
-            The second component of an IMU is called the <b>Accelerometer</b> or <b>Acc</b> and it measures the effective acceleration along an axis.  So, you would need 3 acc to compute angles in 3D given information about external forces. Acc are affected by vibration and other external forces and hence cannot be directly used for computing angles/attitude accurately. However, an acc works well in static conditions as opposed to the gyro. Hence, the simplest filtering operation perfromed on acc data is a low pass filter to remove dynamic noise from vibrations and other external factors. <br><br>
+			All the assignments will be released on <a href=''>this</a> website page. <br><br>
 
-            Also, note that the readings from an IMU are greatly affected by temparature changes. The noise changes with temparature and as the IMU is being used due to "heating up" of the sensor. <br><br>
+			All the assignments are to be submitted using <a href=''>ELMS</a>. If you find any errors/typo in the course github <a href='https://github.com/fireaus/fireaus.github.io'>website</a>, please edit the required markdown '.md' file and send a 'pull request'. If you don't know how to use pull request, please check out <a href='https://help.github.com/articles/about-pull-requests/'>this tutorial</a>.<br><br>
 
-            A combination of 3 gyros and 3 acc (one in each of \(X, Y, Z\) axis) is called a 6-DoF IMU. <br><br>
-
-            A 9-DoF IMU also includes a 3-axis magnetometer which measures Earth's magnetic field which can be used to obtain orientation information as well. However, for indoor operation which has a lot of metal structures, the magnetometer is generally inaccurate as is exluded from the data fusion. The magnetometer is also often called the <b>Digital Compass</b> as it can be directly used to compute the North pole direction. <br><br>
-
-            <hr>
-
-            <a name='mathimu'></a>
-
-            <h3> Mathematical Model of an IMU </h3><br><br>
-
-            Let us assume that our IMU is a 6-DoF one, i.e., it has a 3 axis gyro and a 3 axis acc. A 9-DoF IMU is commonly called MARG (Magnetic, Angular Rate and Gravity) sensor. A simple mathematical model of the gyro and acc is given below.<br><br>
-
-            <h5> Gyroscope Model:</h5><br>
-
-            \( \omega = \hat{\omega} + \mathbf{b}_g + \mathbf{n}_g \) <br><br>
-
-            Here, \(\omega\) is the measured angular velocity from the gyro, \(\hat{\omega}\) is the latent ideal angular velocity we wish to recover, \(\mathbf{b}_g\) is the gyro bias which changes with time and other factors like temparature, \(\mathbf{n}_g\) is the white gaussian gyro noise.<br><br>
+           <h3> Late Submission Policy </h3><br>
+           This course moves quickly, and concepts tend to build on top of each other. Therefore it's very important to keep up with the material. To encourage this, late assignments are penalized for 25% per day after the due date. But life is unpredictable; we all need a break sometimes. So, we allow you <b>six late days</b>, to spend on any assignment(s) except the final assignment (ASN12 and ASN13). You may submit an assignment late (after the due date) using a late day without any penalty. Think of a late day as pushing the deadline back by a day. So, to get full credit on a 2-days-late assignment, you'd need to use two late days. Late days can only be spent as full days (i.e., you can't use only half a late day for an assignment you submit 12 hrs late). If you are using a late day, mention it in the title of your submission as <b>"USING X LATE DAY(S)"</b> and post a comment on ELMS about the usage of a late day. We expect you to keep track of number of late days you have remaining and notify us of usage of one or more late days. We will default for penalty if we don't see the mention of late day usage as a comment on ELMS on that particular assignment. Again, <b>If you are using a late day, mention it in the title of your submission as "USING X LATE DAY(S)"</b>. <br><br>
 
 
-            The gyro bias is modelled as \(\mathbf{\dot{b}}_g = \mathbf{b}_{bg}(t) \sim \mathcal{N}(0, Q_g)\) where \(Q_g\) is the covariance matrix which models gyro noise. <br><br>
-
-
-
-            <h5>Accelerometer Model:</h5><br><br>
-
-            \( \mathbf{a} = R^T(\mathbf{\hat{a}} - \mathbf{g}) + \mathbf{b}_a + \mathbf{n}_a \) <br><br>
-
-            Here, \(\mathbf{a}\) is the measured acceleration from the acc, \(\mathbf{\hat{a}}\) is the latent ideal acceleration we wish to recover, $$R$$ is the orientation of the sensor in the world frame, \(\mathbf{g}\) is the acceleration due to gravity in the world frame, \(\mathbf{b}_a\) is the acc bias which changes with time and other factors like temparature, \(\mathbf{n}_a\) is the the white gaussian acc noise.<br><br>
-
-
-            The acc bias is modelled as \(\mathbf{\dot{b}}_a = \mathbf{b}_{ba}(t) \sim \mathcal{N}(0, Q_a)\) where \(Q_a\) is the covariance matrix which models acc noise. <br><br>
-
-
-            Here the orientation of the sensor is either known from external sources such as a motion capture system or a camera or estimated by sensor fusion. <br><br>
-
-            <hr>
-
-            <a name='trivial'></a>
-
-            <h3> Isn't Attitude Estimation trivial? </h3><br><br>
-
-            You might be thinking if the gyro gives angular acceleration wouldn't attitude estimation be as trivial as integrating these measurements. You would be right! In an <b>ideal</b> world this would work perfectly and we would have the perfect attitude. However, real world is very different and the gyro has both an unknown changing bias and noise. Even if you want the system to work for a small amount of time, say 4 sec where you could assume that the bias doesnt change and can be obtained as averaging measurements when the gyro is at rest. The noise though being small accumulates over time when integrated eventually becoming unbounded in magnitude completely masking the signal. <br><br>
-
-            Keen readers might think, why cant we just low pass filter this signal and then integrate? This is a good idea but would cause a significant lag in the measurements and alter the magnitudes of the high frequency signals where gyro works well. This is no good for us. Also, note that integtation works as a form of <a href="https://webhome.phy.duke.edu/~schol/phy271/faqs/faq8/node6.html">low pass filtering</a>. <br><br>
-
-            Next, one might be thinking why cant we use acc measurements to estimate attitude when only gravity is acting on it? The answer is yes you can do it in an <b>ideal world</b>. In reality, the measurements are too noisy and don't work well when the device is in motion or for high speed motion. Hence necessitating fusing both these sensors. The gyro works well at higher frequency motion (fast movements but drifts over time) while the acc works well at lower frequency motion (works well over long period of time but is inaccurate for fast motion). The gyro and acc have complementary errors, i.e., both are errnoeous but in different bands of the frequency spectrum and hence can be fused to get much more accurate measurements then one could ever get with either of the sensors separately. Hence the name <b>Complementary Filter</b> which is described next. <br><br>
-
-            <hr>
-
-            <a name='cf'></a>
-
-            <h3>  Complementary Filter for Attitude Estimation </h3><br><br>
-
-            The simplest  way to estimate angles/attitude/orientation of the IMU in world is by fusing data from gyros and acc using a <b>Complementary Filter</b>. <br><br>
-
-            Like we mentioned before, we high pass the gyro data and low pass the acc data. <br><br>
-
-            Let \(\mathbf{\omega} = [\omega_x, \omega_y, \omega_z]^T\) and \(\mathbf{a} = [a_x, a_y, a_z]^T\) denote the raw measured data from the gyros and acc respectively. <br><br>
-
-            The low pass filtered acc data is given by<br><br>
-
-            \(\mathbf{\hat{a}}_{t+1} = (1-\alpha)\mathbf{a}_{t+1} + \alpha \mathbf{\hat{a}}_{t}\) <br><br>
-
-
-            The high pass filtered gyro data is given by<br><br>
-
-            \(\mathbf{\hat{\omega}}_{t+1} = (1-\alpha)\mathbf{\hat{\omega}}_{t} + (1-\alpha)(\mathbf{\omega}_{t+1} - \mathbf{\omega}_{t})\) <br><br>
-
-            Here the \(\hat{x}\) denotes the filtered version of \(x\) and \(t\) denotes time sample and \(\alpha\) controls the frequency boundary where to switch from trusting the acc to trusting the gyros. <br><br>
-
-            \(\alpha\) can be chosen as \(\alpha = \frac{\tau}{\tau + dt}\) where \(\tau\) is the desired time constant - how fast you want the readings to respond and \(dt = f_s^{-1}\) is the inverse of sampling frequency \(f_s\). Generally \(\alpha > 0.5\) is used. <br><br>
-
-            The final equation for fusing gyro and acc data into a complementary filter is given below<br><br>
-
-            \( Ang_{t+1} = (1 - \alpha)(Ang_t + \mathbf{\omega}_{t+1}dt) + \alpha\mathbf{a}_{t+1}\) <br><br>
-             
-            Here the gyro data is integrated to obtain angles.<br><br>
-
-            <hr>
-
-            <a name='ref'></a>
-
-            <h3>  References </h3><br>
-            <ol class="unordered-list">
-                 <li> <a href="https://sites.google.com/site/myimuestimationexperience/filters/complementary-filter"> My IMU estimation experience blog</a> </li>
-                 <li> <a href="http://philsal.co.uk/projects/imu-attitude-estimation"> IMU Attitude Estimation</a> </li>
-           </ol>
-
+           <h3> Collaboration Policy and Honor Code </h3><br>
+           Collaboration is encouraged, but one should know the difference between collaboration and cheating. Cheating is prohibited and will carry serious consequences. Cheating may be defined as using or attempting to use unauthorized assistance, material, or study aids in academic work or examinations. Some examples of cheating are: collaborating on an take-home exam or homework unless explicitly allowed; copying homework; handing in someone else's work as your own; and plagiarism. You are welcome to collaborate with your peers on Piazza and in person. However it's important that the work you submit is an expression of your understanding, and not merely something you copied from a peer. So, we place strict limits on collaboration: Firstly, you must clearly cite your collaborators by name at the top of your report. This includes Piazza posts reference. You may not share or copy each other's code. You can discuss how your code works, and the concepts it implements, but you can't just show someone your code. You may use free and publicly available sources, such as books, journal and conference publications, and web pages, as research material for your answers. (You will not lose points for using external sources.) You may not use any service that involves payment, and you must clearly and explicitly cite all outside sources and materials that you made use of. We consider the use of uncited external sources as portraying someone else's work as your own, and as such it is a violation of the University's policies on academic dishonesty. Instances will be dealt with harshly and typically result in a failing course grade. Unless otherwise specified, you should assume that that the UMD Code of Academic Integrity applies. Unless otherwise specified, you should assume that that the <a href='http://www.president.umd.edu/policies/iii100a.html'>UMD Code of Academic Integrity</a> applies.<br><br>
 
 
             </div>
