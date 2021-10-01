@@ -130,6 +130,11 @@ $black			: #222;
   font-weight: 300;
 }
 
+/* Some fancy highlights */
+.cour {
+  font-family:'Courier New';
+}
+
 body {
   color: #777777;
   font-family: "Poppins", sans-serif;
